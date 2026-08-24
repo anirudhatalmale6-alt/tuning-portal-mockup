@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>WinOLS Bot - Admin</title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<nav class="side">
+  <div class="brand">
+    <div class="mark"></div>
+    <div class="name">TUNE<span>PANEL</span></div>
+  </div>
+
+  <a href="#"><span class="ico">&#9672;</span> Dashboard</a>
+
+  <div class="cap">FILE SERVICE</div>
+  <a href="#"><span class="ico">&#8681;</span> File inbox <span class="badge">8</span></a>
+  <a href="#"><span class="ico">&#9781;</span> Portal users <span class="badge">2</span></a>
+  <a href="#" class="on"><span class="ico">&#9635;</span> WinOLS Bot <span class="badge teal">1</span></a>
+  <a href="#"><span class="ico">&#9889;</span> Automation</a>
+  <a href="#"><span class="ico">&#9707;</span> File archive</a>
+  <a href="#"><span class="ico">&#9201;</span> Schedule</a>
+
+  <div class="cap">SETTINGS</div>
+  <a href="#"><span class="ico">&#9881;</span> Tuning solutions</a>
+  <a href="#"><span class="ico">&#9993;</span> Notifications</a>
+  <a href="#"><span class="ico">&#128179;</span> Billing</a>
+</nav>
+
+<div class="main">
+  <div class="top">
+    <h1>WinOLS Bot</h1>
+    <span class="dot">&bull;</span>
+    <span>File service:</span>
+    <span class="sw"></span>
+    <span class="chip">Auto close: <b>Today 22:45</b></span>
+    <div class="who">Hi, Admin <div class="av">A</div></div>
+  </div>
+
+  <div class="body">
+    <div class="card">
+      <div class="card-h">
+        <div>
+          <div class="t"><span>&#9635;</span> WinOLS Bot</div>
+          <div class="s">Your automated file service.</div>
+        </div>
+        <div class="r">
+          <span class="pill ok">&#10003; SENDING FILES TO BOT</span>
+          <span class="pill dark">&#9881; Settings</span>
+          <span class="pill dark">&#9874; Tools &nbsp;<b style="color:#4dd8ca">Autotuner</b> &#9662;</span>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn">Load new orders</button>
+        <label class="cb"><i></i> Disable loading</label>
+      </div>
+      <div class="btn-row">
+        <button class="btn pale">&#8635; Refresh</button>
+        <button class="btn pale">&#9654; Restart all</button>
+        <button class="btn pale">&#9776; Get logs</button>
+        <button class="btn pale">&#9881; Settings</button>
+        <button class="btn pale">+ New order</button>
+        <button class="btn pale">&#9636; Scripts</button>
+        <button class="btn pale">&#9707; Projects</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr><th style="width:250px">Order</th><th>Status</th><th style="width:430px">Options</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ordno">145<small>type 30</small></td>
+            <td><span class="status warn">VersionNotFound</span></td>
+            <td>
+              <div class="opts">
+                <button class="btn sm pale">Order details</button>
+                <button class="btn sm pale">Save...</button>
+                <button class="btn sm pale">Restart</button>
+                <button class="btn sm pale">Recode</button>
+                <button class="btn sm pale">Terminate</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" class="apply">
+              <div class="lbl">Apply version:</div>
+              <div class="selrow">
+                <select>
+                  <option>STAGE 1 &ndash; 95%</option>
+                  <option>ADBLUE OFF &ndash; 93%</option>
+                  <option>EGR OFF &ndash; 88%</option>
+                  <option>DPF OFF &ndash; 81%</option>
+                </select>
+                <button class="iconbtn">&#9998;</button>
+              </div>
+              <div class="selrow">
+                <select class="wide">
+                  <option>No second version</option>
+                  <option>ADBLUE OFF &ndash; 93%</option>
+                  <option>EGR OFF &ndash; 88%</option>
+                </select>
+              </div>
+              <div class="btn-row" style="margin:14px 0 0">
+                <button class="btn">Apply</button>
+                <button class="btn pale">Create script</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="ordno">144<small>type 30</small></td>
+            <td><span class="status proc">PostProcessing</span></td>
+            <td>
+              <div class="opts">
+                <button class="btn sm pale">Order details</button>
+                <button class="btn sm pale">Save...</button>
+                <button class="btn sm pale">Restart</button>
+                <button class="btn sm pale">Recode</button>
+                <button class="btn sm pale">Terminate</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Your file service</span>
+    <div class="r"><span>&#9728;</span><span>&#127468;&#127463; English &#9662;</span><span>&#9993; Get support</span></div>
+  </div>
+</div>
+
+<div class="toast">
+  <span class="x">&times;</span>
+  <b>File #145 has been updated</b>
+  <span>Click here to view the file.</span>
+</div>
+
+</body>
+</html>
