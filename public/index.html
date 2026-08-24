@@ -2,117 +2,41 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Your Files</title>
+<title>Tuning Portal - UI mockup</title>
 <link rel="stylesheet" href="css/app.css">
+<style>
+body{display:block}
+.wrap{max-width:760px;margin:0 auto;padding:60px 26px}
+h1{font-size:26px;margin-bottom:8px}
+.sub{color:var(--txt-dim);margin-bottom:34px}
+.lk{display:block;background:var(--card);border-radius:9px;padding:22px 24px;
+  margin-bottom:16px;text-decoration:none;color:var(--txt);
+  border:1px solid var(--line)}
+.lk:hover{background:var(--card-2)}
+.lk b{font-size:16px;display:block;margin-bottom:5px}
+.lk span{color:var(--txt-dim);font-size:13.5px}
+.note{color:var(--txt-dim);font-size:13px;margin-top:28px;line-height:1.7}
+</style>
 </head>
 <body>
+<div class="wrap">
+  <h1>Tuning portal &ndash; UI mockup</h1>
+  <div class="sub">Static screens, fake data, nothing wired up yet.</div>
 
-<nav class="side">
-  <div class="logo-box">YOUR LOGO</div>
-  <a href="#"><span class="ico">&#9672;</span> Dashboard</a>
-  <a href="#" class="on"><span class="ico">&#8681;</span> Files <span class="badge">&nbsp;</span></a>
-  <a href="#"><span class="ico">&#8679;</span> Upload</a>
-  <a href="#"><span class="ico">&#9906;</span> Vehicle Data</a>
-  <a href="#"><span class="ico">&#9707;</span> Shop</a>
-  <a href="#"><span class="ico">&#9636;</span> Invoices</a>
-</nav>
+  <a class="lk" href="admin-bot.html">
+    <b>Admin &ndash; WinOLS Bot</b>
+    <span>Order queue, VersionNotFound gate, apply-version dropdown with match percentages</span>
+  </a>
 
-<div class="main">
-  <div class="top">
-    <h1>Your Files</h1>
-    <span class="dot">&bull;</span>
-    <span>File service:</span>
-    <span class="pill ok" style="padding:5px 11px">ONLINE</span>
-    <span style="color:var(--txt-dim)">until</span>
-    <span class="chip"><b>Today 22:45 BST</b></span>
-    <span class="chip">&#9201; 21:10:42</span>
-    <div class="who">
-      <div class="credit">
-        <span style="color:var(--txt-dim)">Credit Balance:</span>
-        <span class="amt">&pound;4,002.08</span>
-      </div>
-      Hi, Ben <div class="av">B</div>
-    </div>
-  </div>
+  <a class="lk" href="portal-files.html">
+    <b>Customer portal &ndash; Files</b>
+    <span>Upload confirmation, file history, vehicle rows, Pending / Void / Returned</span>
+  </a>
 
-  <div class="body">
-    <div class="banner">
-      <div class="tick">&#10003;</div>
-      <h2>File uploaded and is now in the queue!</h2>
-      <p>We will notify you when your file is updated.</p>
-    </div>
-
-    <div class="card">
-      <div class="card-h">
-        <div>
-          <div class="t">Files</div>
-          <div class="s">View your file history</div>
-        </div>
-      </div>
-
-      <div class="tablebar">
-        Show <span class="sel">10 &#9662;</span> entries
-        <span class="srch">Search: <input type="text"></span>
-      </div>
-
-      <table>
-        <thead>
-          <tr>
-            <th style="width:60px"># &#8645;</th>
-            <th style="width:150px">Last Updated &#8645;</th>
-            <th>Vehicle</th>
-            <th style="width:110px">Reg &#8645;</th>
-            <th style="width:130px">Status &#8645;</th>
-            <th style="width:130px"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="ago">145</td><td class="ago">3m ago</td>
-            <td><div class="veh"><span class="mk">MB</span> Mercedes Sprinter 208/308/408 CDI - 82hp</div></td>
-            <td>TEST</td><td><span class="st pend">Pending</span></td>
-            <td><button class="viewbtn">&#8594; View</button></td>
-          </tr>
-          <tr>
-            <td class="ago">144</td><td class="ago">8m ago</td>
-            <td><div class="veh"><span class="mk">MB</span> Mercedes Sprinter 208/308/408 CDI - 82hp</div></td>
-            <td>TEST</td><td><span class="st void">Void</span></td>
-            <td><button class="viewbtn alert">&#9873; View</button></td>
-          </tr>
-          <tr>
-            <td class="ago">143</td><td class="ago">13m ago</td>
-            <td><div class="veh"><span class="mk">MB</span> Mercedes Sprinter 208/308/408 CDI - 82hp</div></td>
-            <td>TEST</td><td><span class="st void">Void</span></td>
-            <td><button class="viewbtn alert">&#9873; View</button></td>
-          </tr>
-          <tr>
-            <td class="ago">142</td><td class="ago">19m ago</td>
-            <td><div class="veh"><span class="mk">MB</span> Mercedes Sprinter 208/308/408 CDI - 82hp</div></td>
-            <td>TEST</td><td><span class="st void">Void</span></td>
-            <td><button class="viewbtn alert">&#9873; View</button></td>
-          </tr>
-          <tr>
-            <td class="ago">141</td><td class="ago">23m ago</td>
-            <td><div class="veh"><span class="mk">AU</span> Audi A1 25 TFSI - 1.0T - 95hp</div></td>
-            <td>TEST</td><td><span class="st ret">Returned</span></td>
-            <td><button class="viewbtn">&#8594; View</button></td>
-          </tr>
-          <tr>
-            <td class="ago">140</td><td class="ago">31m ago</td>
-            <td><div class="veh"><span class="mk">BM</span> BMW 320d F30 - 2.0d - 184hp</div></td>
-            <td>TEST</td><td><span class="st ret">Returned</span></td>
-            <td><button class="viewbtn">&#8594; View</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="foot">
-    <span>Your file service</span>
-    <div class="r"><span>&#9728;</span><span>&#127468;&#127463; English &#9662;</span><span>&#9993; Get support</span></div>
+  <div class="note">
+    Layout only at this stage. Branding is placeholder &ndash; your logo and name
+    replace it. Tell me what to change before the backend goes on.
   </div>
 </div>
-
 </body>
 </html>
