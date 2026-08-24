@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tuning Portal - agreed scope</title>
+<link rel="stylesheet" href="css/app.css">
+<style>
+body{display:block}
+.wrap{max-width:900px;margin:0 auto;padding:52px 26px 90px}
+h1{font-size:26px;margin-bottom:6px}
+h2{font-size:17px;margin:38px 0 14px;padding-bottom:9px;border-bottom:1px solid var(--line)}
+.sub{color:var(--txt-dim);margin-bottom:10px;font-size:14px}
+.stamp{color:var(--txt-dim);font-size:12.5px;margin-bottom:30px}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;color:var(--txt-dim);font-weight:600;padding:9px 10px;
+  border-bottom:1px solid var(--line);font-size:12px;text-transform:uppercase;
+  letter-spacing:.04em}
+td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+td.n{white-space:nowrap;color:var(--txt-dim)}
+td.p{white-space:nowrap;text-align:right;font-weight:600}
+.tot td{border-bottom:none;padding-top:14px;font-size:15px}
+.tot .p{color:var(--teal);font-size:17px}
+ul{margin:0 0 0 18px;padding:0}
+li{margin-bottom:9px;line-height:1.65;font-size:13.5px}
+.free{color:var(--teal);font-weight:600}
+.warn{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--amber);
+  border-radius:7px;padding:15px 18px;margin:16px 0;font-size:13.5px;line-height:1.65}
+.warn b{color:var(--amber)}
+.q{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--blue);
+  border-radius:7px;padding:15px 18px;margin:16px 0;font-size:13.5px;line-height:1.65}
+.q b{color:var(--blue)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:9px;
+  padding:18px 20px;margin-bottom:14px}
+.card h3{font-size:14.5px;margin-bottom:9px}
+.scroll{overflow-x:auto}
+a{color:var(--blue)}
+.back{display:inline-block;margin-bottom:26px;font-size:13.5px;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<a class="back" href="index.html">&larr; back to the mockups</a>
+
+<h1>Tuning portal &ndash; agreed scope</h1>
+<div class="sub">Everything settled in chat, written down so neither of us is
+working from memory.</div>
+<div class="stamp">Last updated 24 August 2026. If anything below is wrong, say so
+and I&rsquo;ll change it &ndash; this page is the reference I build from.</div>
+
+<h2>Price</h2>
+<div class="scroll">
+<table>
+<tr><th>#</th><th>Milestone</th><th>USD</th></tr>
+<tr><td class="n">M1</td><td>Lua script + watchdog, one file end to end</td><td class="p">150</td></tr>
+<tr><td class="n">M2</td><td>Multi-database routing, apply-version dropdown with match percentages, second-version stacking</td><td class="p">150</td></tr>
+<tr><td class="n">M3</td><td>Customer portal &ndash; upload with progress, file history, statuses, download, notifications</td><td class="p">300</td></tr>
+<tr><td class="n">M4</td><td>Admin panel &ndash; inbox, queue, per-order actions, logs, force reprocess, audit</td><td class="p">200</td></tr>
+<tr><td class="n">M5</td><td>Portal users, roles and permissions</td><td class="p">100</td></tr>
+<tr><td class="n">M6</td><td>Alientech + MagicMotorsport API adapters</td><td class="p">150</td></tr>
+<tr><td class="n">M7</td><td>Autotuner local master decrypt/encrypt</td><td class="p">200</td></tr>
+<tr><td class="n">M8</td><td>Credits, Stripe, invoices, billing</td><td class="p">300</td></tr>
+<tr><td class="n">M9</td><td>Shop / credit packages</td><td class="p">150</td></tr>
+<tr><td class="n">M10</td><td>Vehicle data &ndash; make/model/engine, ECU and tool lookup</td><td class="p">200</td></tr>
+<tr><td class="n">M11</td><td>Schedule and opening hours</td><td class="p">100</td></tr>
+<tr><td class="n">M12</td><td>Deploy on your hosting</td><td class="p">100</td></tr>
+<tr><td class="n">M13</td><td>Customer return instructions + auto-linked YouTube videos</td><td class="p">100</td></tr>
+<tr class="tot"><td></td><td>Total</td><td class="p">2200</td></tr>
+</table>
+</div>
+<div class="sub" style="margin-top:14px">
+Billed one milestone at a time, as each lands. Nothing is paid up front.
+Migration of your existing customers and file history is a separate
+<b>150</b>, and holds at that because you can export the data yourself.
+</div>
+
+<h2>Included at no extra cost</h2>
+<ul>
+<li><span class="free">Per-file chat</span> &ndash; Return/Comment on the order, because it is in the reference and I agreed to match the reference.</li>
+<li><span class="free">General support section</span> &ndash; tickets not tied to a file, same inbox, flagged separately. Same thread engine, so it is reuse.</li>
+<li><span class="free">Internal ECU notes</span> &ndash; keyed to the ECU type, admin and tech can both add, appended not overwritten, with who and when.</li>
+<li><span class="free">Turnaround / ETA</span> &ndash; set a time frame when there is no solution to hand; customer sees it with a countdown.</li>
+<li><span class="free">Editable invoices</span> &ndash; line items, amounts, notes, regenerate the PDF, with a record of what changed.</li>
+<li><span class="free">VAT rate setting</span> &ndash; off now, switch on a percentage later.</li>
+<li><span class="free">WinOLS licence badge</span> &ndash; your EVC image, cached locally rather than hotlinked.</li>
+<li><span class="free">Signup, password reset, captcha</span> &ndash; folded into M5.</li>
+<li><span class="free">Client folder selection</span> &ndash; dropdown over your WinOLS clients, folded into M2.</li>
+<li><span class="free">Dimsport manual lane</span> &ndash; portal flags the file, tech decrypts in DS Manager, the rest stays automated.</li>
+</ul>
+
+<h2>Credits and money</h2>
+<div class="card">
+<h3>How it works</h3>
+<ul>
+<li>&pound;1 = 1 credit. Stripe. Multiple credit packages to buy.</li>
+<li>Credits come off <b>when the file is sent in</b>, not when it goes back.</li>
+<li>Price varies by what is selected &ndash; base solution plus options, some options included free with certain stages. Your example: Stage 1 diesel 50 credits with free deletes, dpf egr 40, dpf egr scr 45.</li>
+<li>Price can still move after submission using Raise a charge and Apply credit.</li>
+<li>Refunds go to the <b>credit balance</b>, never back out through Stripe.</li>
+<li>VAT applies to <b>new invoices only</b> &ndash; never retrospectively, or invoices your customers already hold would silently change.</li>
+</ul>
+</div>
+<div class="warn">
+<b>No automatic refunds anywhere.</b> A bot failure is a handover, not a
+failure &ndash; no match drops into the tech queue as manual work and the credits
+stay taken. Credits only return when one of you clicks refund. On Void you get a
+yes/no prompt so it is a decision each time rather than a silent default.
+</div>
+
+<h2>What the customer never sees</h2>
+<div class="warn">
+The bot&rsquo;s own states &ndash; <b>VersionNotFound</b>, <b>PostProcessing</b>,
+<b>WaitForFinish</b> &ndash; stay internal. The customer only ever sees
+<b>Pending</b>, <b>Returned</b> or <b>Void</b>. A file that falls through to
+manual work simply reads as still in progress, with the ETA if you have set one.
+</div>
+
+<h2>Roles</h2>
+<ul>
+<li><b>Admin</b> &ndash; everything.</li>
+<li><b>Tech</b> &ndash; sees the customer <b>name only</b>, no email or contact details. No payment information, no gateway settings. Can refund a file.</li>
+<li><b>Customer</b> &ndash; own files, own balance, own invoices.</li>
+</ul>
+
+<h2>ECU notes and return instructions</h2>
+<div class="card">
+<h3>Internal notes &ndash; for your techs</h3>
+<ul>
+<li>Attached to the <b>ECU type</b>, because that is where repeat mistakes live. Select MD1CS003 and the note for it appears.</li>
+<li>Pinned at the top of the order before the tech starts. Also shows on the bot&rsquo;s no-match queue.</li>
+<li>Normal or <b>warning</b> flag, so &ldquo;never use bench on this one&rdquo; shows red.</li>
+<li>The point of it, in your words: stop using the wrong software on an ECU.</li>
+</ul>
+</div>
+<div class="card">
+<h3>Customer instructions &ndash; the M13 piece</h3>
+<ul>
+<li>File goes back for adblue or dpf, the portal tells the customer Reset Adblue, Reset DPF, disconnect the adblue ECU or pull the fuse, with the right video attached &ndash; worked out automatically instead of you picking it.</li>
+<li><b>Two levels.</b> A general rule per solution (DPF off always says Reset DPF, general video), then an ECU-specific override on top (MD1CS003 + SCR delete says pull the fuse, own video). The override wins where it exists.</li>
+<li>One level would mean an entry for every ECU and solution combination you handle &ndash; thousands, and it would never get filled in.</li>
+</ul>
+</div>
+<div class="warn">
+<b>Where it cannot be automatic.</b> The upload page has a &ldquo;vehicle not
+listed&rdquo; route. On those the portal never learns the ECU, so no instructions
+attach themselves and the tech picks them by hand, as you do today.
+</div>
+
+<h2>How it is put together</h2>
+<div class="card">
+<h3>Windows VM</h3>
+<ul>
+<li>WinOLS 5 + OLS530, your .ols client folders, the Lua script running permanently, my local agent, Autotuner software.</li>
+<li>Must auto-login to a real desktop session &ndash; WinOLS only takes the Lua script as a launch parameter, so it can never run as a Windows service.</li>
+<li>Autotuner master tool passed through over USB.</li>
+</ul>
+</div>
+<div class="card">
+<h3>Linux VM</h3>
+<ul>
+<li>Portal, database, Cloudflare Tunnel.</li>
+</ul>
+</div>
+<div class="card">
+<h3>Traffic</h3>
+<ul>
+<li>The agent polls the portal over HTTPS, writes ticket files, Lua picks them up, and Lua posts the finished file back.</li>
+<li><b>All outbound.</b> No ports opened on the Windows VM, no static IP needed.</li>
+</ul>
+</div>
+
+<h2>Risks I am watching</h2>
+<div class="warn">
+<b>WinOLS auto-updates.</b> An update restarts WinOLS and the Lua script does not
+come back, because it is a launch parameter. The queue then stalls silently. The
+watchdog has to spot a running-but-scriptless instance, not just a dead one.
+</div>
+<div class="warn">
+<b>Your Windows VM is a stealth VM.</b> If a tool or Windows update re-detects the
+hypervisor, the decrypt step starts failing quietly. A health check flags it on
+the admin panel instead of letting files pile up looking normal.
+</div>
+<div class="warn">
+<b>Autotuner in a VM is the one real unknown.</b> USB passthrough itself is proven
+on your box. The risk is the tool software refusing to run in a VM. Test it by
+decrypting a real slave file inside the VM, not by checking Device Manager &ndash;
+and do it before M7 is paid for.
+</div>
+<div class="warn">
+<b>Home broadband.</b> A power cut or an ISP outage takes the customer portal down.
+Cloudflare Tunnel handles reachability, but if that matters the portal can sit on
+a cheap VPS and talk back over Tailscale. Same build either way, decide later.
+</div>
+
+<h2>Still open</h2>
+<div class="q">
+<b>1.</b> Are your several &ldquo;databases&rdquo; genuinely separate WinOLS
+databases, or client folders inside one tree? Separate databases means one WinOLS
+instance each, with the portal routing the job.
+</div>
+<div class="q">
+<b>2.</b> Is the language selector on your current portal actually used? It decides
+whether translation is worth quoting.
+</div>
+<div class="q">
+<b>3.</b> What should the admin panel be called? The mockup says TUNEPANEL as a
+placeholder.
+</div>
+<div class="q">
+<b>4.</b> The Linux VM, and a Tailscale auth key &ndash; reusable off, ephemeral on,
+tagged, limited to that one VM on port 22. Not your account login.
+</div>
+
+</div>
+</body>
+</html>
