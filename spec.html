@@ -170,6 +170,42 @@ building on the wrong base file. Priority decides between <i>good</i> matches;
 the match percentage decides when nothing is clearly good.
 </div>
 
+<div class="card">
+<h3>Duplicates across clients</h3>
+<ul>
+<li>Matched on <b>content, not names</b> &ndash; names never line up across clients.</li>
+<li><b>Same original:</b> the file is hashed. Byte-identical originals collapse into one row with an &ldquo;in 3 clients&rdquo; badge instead of three rows you compare by eye.</li>
+<li><b>Same mod:</b> WinOLS gives the changed areas of a project against its original. That change set is hashed, so two solutions touching the same addresses with the same bytes are provably the same mod and show once.</li>
+</ul>
+</div>
+<div class="warn">
+<b>Near-identical is never merged automatically.</b> A different software version on
+the same ECU looks like a duplicate and is not. Those are flagged
+&ldquo;looks similar&rdquo; and stay as separate rows for a person to decide.
+Merging them is the same mistake as stopping at the first mediocre match.
+</div>
+
+<h2>Tools and serial numbers</h2>
+<div class="sub" style="margin-bottom:14px">
+Magic uses the <b>tool serial number</b> as the decryption key, so a file cannot be
+decrypted from the file alone &ndash; the bot has to know whose tool it came off.
+This sits inside M7, no extra charge.
+</div>
+<div class="card">
+<h3>How it works</h3>
+<ul>
+<li>Each customer account holds a list of their tools &ndash; Autotuner, Magic, KESS, CMD &ndash; with the serial for each.</li>
+<li>On upload the customer picks which tool the file came from.</li>
+<li>The bot decrypts with that serial and <b>re-encrypts with the same one</b>, so the file goes back into the tool it came out of. Three Magic tools on one account means it has to return to the right one.</li>
+<li>A file that will not decrypt with any serial on that account drops into your manual queue <b>with the reason written on it</b>, rather than sitting there looking broken.</li>
+</ul>
+</div>
+<div class="warn">
+<b>Serials are treated as secrets</b>, because that is what they are &ndash; a
+decryption key. Stored encrypted, masked in the interface down to the last four,
+and techs do not see them at all. Same handling as payment details.
+</div>
+
 <h2>How it is put together</h2>
 <div class="card">
 <h3>Windows VM</h3>
@@ -218,8 +254,8 @@ a cheap VPS and talk back over Tailscale. Same build either way, decide later.
 
 <h2>Still open</h2>
 <div class="q">
-<b>1.</b> If the same original sits in two of your clients &ndash; hide the
-duplicate, or show both because the solutions attached to them differ?
+<b>1.</b> Tool serial numbers &ndash; do customers type their own in at signup, or
+do you add them yourself so nothing goes in unverified?
 </div>
 <div class="q">
 <b>2.</b> Is the language selector on your current portal actually used? It decides
