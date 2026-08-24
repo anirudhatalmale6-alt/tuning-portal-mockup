@@ -147,6 +147,29 @@ listed&rdquo; route. On those the portal never learns the ECU, so no instruction
 attach themselves and the tech picks them by hand, as you do today.
 </div>
 
+<h2>Which WinOLS client gets searched</h2>
+<div class="sub" style="margin-bottom:14px">
+Your several &ldquo;databases&rdquo; are separate <b>clients</b> inside one
+WinOLS, not separate databases. That keeps it simple &ndash; one WinOLS instance,
+the bot switches client and searches again. Four clients is four searches per
+file, which at 10&ndash;20 files a day costs nothing.
+</div>
+<div class="card">
+<h3>How the search runs</h3>
+<ul>
+<li>You order the clients in the portal by dragging them. Not hardcoded, change it whenever.</li>
+<li>A high bar is set &ndash; 95% to start. The bot searches in your order and the <b>first client to clear that bar wins</b>.</li>
+<li>If nobody clears it, the bot does <b>not</b> settle for the first mediocre hit. It searches all of them, pools the candidates, and shows them ranked by match with the client name against each. Your tech picks.</li>
+<li>That is the same VersionNotFound screen as the demo, with a client column added.</li>
+</ul>
+</div>
+<div class="warn">
+<b>Why not strict priority.</b> Stopping at the first hit in your top client means
+a 78% match there beats a 96% match in the fourth one. That is how you end up
+building on the wrong base file. Priority decides between <i>good</i> matches;
+the match percentage decides when nothing is clearly good.
+</div>
+
 <h2>How it is put together</h2>
 <div class="card">
 <h3>Windows VM</h3>
@@ -195,9 +218,8 @@ a cheap VPS and talk back over Tailscale. Same build either way, decide later.
 
 <h2>Still open</h2>
 <div class="q">
-<b>1.</b> Are your several &ldquo;databases&rdquo; genuinely separate WinOLS
-databases, or client folders inside one tree? Separate databases means one WinOLS
-instance each, with the portal routing the job.
+<b>1.</b> If the same original sits in two of your clients &ndash; hide the
+duplicate, or show both because the solutions attached to them differ?
 </div>
 <div class="q">
 <b>2.</b> Is the language selector on your current portal actually used? It decides
